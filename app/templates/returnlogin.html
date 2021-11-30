@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>请先<a href="/login">登录</a>。</p>
+            <span id='sp'>3</span>
+            <script type="text/javascript">
+            onload=function(){
+            setInterval(go, 1000);
+            };
+            var x=3; //利用了全局变量来执行
+            function go(){
+            x--;
+            if(x>0){
+            document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。
+            }else{
+            location.href='/login';
+            }
+            }
+            </script>
+</body>
+</html>
